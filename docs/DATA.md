@@ -23,7 +23,13 @@ and every other date is counted in whole days from there.
    [`tests/fixtures/hamropatro-month-starts.json`](../tests/fixtures/hamropatro-month-starts.json). All 143 collected
    months match this package. Asoj 2083 = 31 days was also confirmed on
    [nepalicalendar.rat32.com](https://nepalicalendar.rat32.com/2083/ashwin).
-3. **Where sources disagreed:**
+3. **Government source for BS 2083.** The Ministry of Home Affairs holiday notice in the Nepal Gazette
+   (Nepal Rajpatra, Vol. 75, No. 67, Part 5, 2082-11-18) lists every Saturday of 2083 and the weekday of each
+   holiday. Because Saturdays run continuously across month boundaries, they pin down every month length of 2083.
+   All of them, plus four holidays fixed to Gregorian dates (1 May, 3 December, 25 December, 8 March), match this
+   package. They are stored in
+   [`tests/fixtures/gazette-2083-weekdays.json`](../tests/fixtures/gazette-2083-weekdays.json).
+4. **Where sources disagreed:**
    - **2083 (Kartik onward):** `bikram-sambat-js` gives Asoj 30 days. Hamro Patro, rat32 and the other four libraries
      give 31. This package uses 31.
    - **2084–2086:** `nepali-date-converter`, `nepali-datetime` and `@remotemerge/nepali-date-converter` differ from

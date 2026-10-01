@@ -7,8 +7,10 @@
 Accurate, timezone-safe **Bikram Sambat (BS) ⇄ Gregorian (AD)** date conversion for JavaScript and TypeScript —
 plus formatting in English and Nepali, parsing, date math, and month grids for building calendars and date pickers.
 
-- **Checked against published calendars.** Every month start from BS 2075–2086 matches Hamro Patro, and BS 2000–2082
-  matches the agreed result of five other libraries. ([How the data was checked](./docs/DATA.md))
+- **Checked against published calendars.** BS 2083 matches the government's own Nepal Gazette holiday notice:
+  every Saturday, 36 holiday weekdays, and Christmas falling on 25 December. Every month start from BS 2075–2086
+  matches Hamro Patro, and BS 2000–2082 matches the agreed result of five other libraries.
+  ([How the data was checked](./docs/DATA.md))
 - **Honest about future years.** The official calendar is published about one year ahead. Each year is marked
   `verified` or `provisional`, and you can add a corrected year at runtime with no package upgrade.
 - **The same result in every timezone.** Conversion uses whole-day arithmetic, never `Date` parsing. The test suite
