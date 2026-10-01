@@ -62,7 +62,8 @@
     "format": "prettier --write .",
     "typecheck": "tsc -p .",
     "check:package": "publint && attw --pack . --profile node16",
-    "prepublishOnly": "npm run lint && npm test && npm run build && npm run check:package"
+    "prepublishOnly": "npm run lint && npm test && npm run build && npm run check:package",
+    "prepare": "tsup"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.5",
