@@ -1,0 +1,86 @@
+{
+  "name": "nepali-miti",
+  "version": "1.0.0",
+  "description": "Accurate, timezone-safe Bikram Sambat (BS) ⇄ Gregorian (AD) date conversion, formatting and calendar grids for JavaScript and TypeScript. Zero dependencies.",
+  "keywords": [
+    "nepali",
+    "nepali-date",
+    "bikram-sambat",
+    "bs",
+    "ad",
+    "date-converter",
+    "nepali-calendar",
+    "patro",
+    "miti",
+    "vikram-samvat",
+    "nepal",
+    "typescript"
+  ],
+  "homepage": "https://github.com/alexblaze/nepali-miti#readme",
+  "bugs": {
+    "url": "https://github.com/alexblaze/nepali-miti/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexblaze/nepali-miti.git"
+  },
+  "license": "MIT",
+  "author": "alexblaze (https://github.com/alexblaze)",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "docs/DATA.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint . && prettier --check . && tsc -p .",
+    "format": "prettier --write .",
+    "typecheck": "tsc -p .",
+    "check:package": "publint && attw --pack . --profile node16",
+    "prepublishOnly": "npm run lint && npm test && npm run build && npm run check:package"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@eslint/js": "^10.0.1",
+    "@vitest/coverage-v8": "^5.0.3",
+    "eslint": "^10.11.0",
+    "prettier": "^3.9.9",
+    "publint": "^0.3.24",
+    "tsup": "^8.5.1",
+    "typescript": "~5.9",
+    "typescript-eslint": "^8.71.0",
+    "vitest": "^5.0.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "overrides": {
+    "esbuild": "^0.28.2"
+  }
+}
